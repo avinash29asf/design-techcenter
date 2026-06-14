@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design and Tech Center</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="images/logo.svg" alt="Design and Tech Center" class="logo-img"></a>
+    </div>
+
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div style="display:flex;align-items:center;">
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Toggle Dark/Light Mode">&#9790;</button>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Professional Jig & Fixture Design Solutions</h1>
+        <p>
+            Innovative CAD Design, 3D Modeling, Manufacturing &
+            Engineering Solutions.
+        </p>
+
+        <a href="contact.html" class="btn">
+            Request Quote
+        </a>
+    </div>
+</section>
+
+<section class="about-preview">
+    <h2>Welcome to Design and Tech Center</h2>
+
+    <p>
+        We provide professional Jig & Fixture Design,
+        Welding Fixture Design, Checking Fixture Design,
+        CAD Drafting and 3D Modeling Services for
+        Manufacturing Industries.
+    </p>
+</section>
+
+<section class="services">
+
+    <h2>Our Services</h2>
+
+    <div class="service-container">
+
+        <div class="card">
+            <h3>Jig Design</h3>
+            <p>Precision Jig Design Solutions.</p>
+        </div>
+
+        <div class="card">
+            <h3>Fixture Design</h3>
+            <p>Industrial Fixture Design Services.</p>
+        </div>
+
+        <div class="card">
+            <h3>3D CAD Modeling</h3>
+            <p>Advanced CAD Modeling Solutions.</p>
+        </div>
+
+        <div class="card">
+            <h3>2D Drafting</h3>
+            <p>Engineering Drawings & Drafting.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="industries">
+
+    <h2>Industries We Serve</h2>
+
+    <div class="industry-container">
+        <div class="industry-box">Automotive</div>
+        <div class="industry-box">Manufacturing</div>
+        <div class="industry-box">Tool Room</div>
+        <div class="industry-box">Engineering Companies</div>
+    </div>
+
+</section>
+
+<section class="cta">
+
+    <h2>Need a Custom Design?</h2>
+
+    <p>
+        Contact us today for professional engineering solutions.
+    </p>
+
+    <a href="contact.html" class="btn">
+        Contact Now
+    </a>
+
+</section>
+
+<footer>
+
+    <p>Design and Tech Center</p>
+    <p>Phone: 9075380880</p>
+    <p>Email: design030599@gmail.com</p>
+    <p>Nigdi, Pune - 411044</p>
+
+</footer>
+
+<script>
+function toggleMenu(){
+    var nav = document.getElementById('navMenu');
+    var btn = document.querySelector('.menu-toggle');
+    nav.classList.toggle('active');
+    btn.classList.toggle('active');
+}
+
+document.querySelectorAll('#navMenu a').forEach(function(link){
+    link.addEventListener('click', function(){
+        document.getElementById('navMenu').classList.remove('active');
+        document.querySelector('.menu-toggle').classList.remove('active');
+    });
+});
+
+function toggleTheme(){
+    var html = document.documentElement;
+    var btn = document.getElementById('themeBtn');
+    if(html.getAttribute('data-theme') === 'dark'){
+        html.removeAttribute('data-theme');
+        btn.innerHTML = '&#9790;';
+        localStorage.setItem('theme', 'light');
+    } else {
+        html.setAttribute('data-theme', 'dark');
+        btn.innerHTML = '&#9728;';
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+// Load saved theme on page load
+(function(){
+    var saved = localStorage.getItem('theme');
+    if(saved === 'dark'){
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.getElementById('themeBtn').innerHTML = '&#9728;';
+    }
+})();
+</script>
+
+</body>
+</html>
