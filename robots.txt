@@ -1,0 +1,5 @@
+# Robots.txt for Design and Tech Center
+User-agent: *
+Allow: /
+
+Sitemap: https://designandtechcenter.com/sitemap.xml

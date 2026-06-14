@@ -3,14 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Design and Tech Center</title>
+
+<!-- SEO Meta Tags -->
+<title>Design and Tech Center | Professional Jig & Fixture Design Solutions</title>
+<meta name="description" content="Design and Tech Center offers professional Jig & Fixture Design, Welding Fixture Design, Checking Fixture Design, CAD Drafting and 3D Modeling Services for Manufacturing Industries in Pune, India.">
+<meta name="keywords" content="Jig Design, Fixture Design, Welding Fixture, Checking Fixture, CAD Modeling, 3D Modeling, 2D Drafting, Engineering Design, Pune, Manufacturing Solutions">
+<meta name="author" content="Design and Tech Center">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://designandtechcenter.com/">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Design and Tech Center | Jig & Fixture Design Solutions">
+<meta property="og:description" content="Professional Jig & Fixture Design, CAD Modeling and Manufacturing Solutions.">
+<meta property="og:url" content="https://designandtechcenter.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://designandtechcenter.com/logo.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Design and Tech Center">
+<meta name="twitter:description" content="Professional Engineering Design Solutions for Manufacturing Industries.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png">
+
 <link rel="stylesheet" href="style.css">
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Design and Tech Center",
+  "description": "Professional Jig & Fixture Design, CAD Modeling and Manufacturing Solutions",
+  "url": "https://designandtechcenter.com/",
+  "telephone": "+919075380880",
+  "email": "design030599@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nigdi",
+    "addressRegion": "Pune",
+    "addressCountry": "IN",
+    "postalCode": "411044"
+  },
+  "sameAs": [
+    "https://wa.me/919075380880"
+  ]
+}
+</script>
 </head>
 <body>
 
 <header>
     <div class="logo">
-        <a href="index.html"><img src="logo.png" alt="Design and Tech Center" class="logo-img"></a>
+        <a href="index.html"><img src="logo.png" alt="Design and Tech Center - Jig & Fixture Design Company Pune" class="logo-img"></a>
     </div>
 
     <nav id="navMenu">
@@ -22,7 +68,7 @@
     </nav>
 
     <div style="display:flex;align-items:center;">
-        <button class="menu-toggle" onclick="toggleMenu()">
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu">
             <span></span>
             <span></span>
             <span></span>
@@ -151,7 +197,6 @@ function toggleTheme(){
     }
 }
 
-// Load saved theme on page load
 (function(){
     var saved = localStorage.getItem('theme');
     if(saved === 'dark'){
