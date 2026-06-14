@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://design-techcenter.com/sitemap.xml
+Sitemap: https://github.com/avinash29asf/design-techcenter/sitemap.xml
